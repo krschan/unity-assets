@@ -1,6 +1,7 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class PlayerAttackManager : MonoBehaviour
+public class PlayerAttackManager : NetworkBehaviour
 {
     [SerializeField] private GameObject attackPrefab;
 

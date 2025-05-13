@@ -92,6 +92,7 @@ public class APIManager : MonoBehaviour
             if (serverResponse.StartsWith("success"))
             {
                 SavePlayerID(serverResponse);
+                PlayerPrefs.SetString("jugador_nombre", name);
                 SceneManager.LoadScene("MenuLobby");
             }
             else
@@ -107,6 +108,7 @@ public class APIManager : MonoBehaviour
         string[] parts = response.Split('|');
         if (parts.Length > 1 && int.TryParse(parts[1], out int id)) {
             PlayerPrefs.SetInt("jugador_id", id);
+            PlayerPrefs.SetString("jugador_nombre", name);
         }
     }
 

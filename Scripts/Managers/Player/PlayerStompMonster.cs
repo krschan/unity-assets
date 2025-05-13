@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class PlayerStompMonster : MonoBehaviour
+public class PlayerStompMonster : NetworkBehaviour
 {
     // The method is triggered when the player collides with another object
     private void OnCollisionEnter2D(Collision2D collision)

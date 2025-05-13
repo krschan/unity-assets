@@ -1,6 +1,7 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class PlayerJumpController : MonoBehaviour
+public class PlayerJumpController : NetworkBehaviour
 {
     private GameObject player;
     private Animator playerAnimator;
